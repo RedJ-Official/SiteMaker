@@ -1,0 +1,96 @@
+//{{NO_DEPENDENCIES}}
+// Microsoft Visual C++ generated include file.
+// Used by SiteMaker.rc
+//
+#define IDD_ABOUTBOX                    100
+#define IDP_OLE_INIT_FAILED             100
+#define IDS_TOOLBAR_STANDARD            124
+#define IDS_TOOLBAR_CUSTOMIZE           125
+#define ID_VIEW_CUSTOMIZE               126
+#define IDS_TOOLBAR_FORMAT              126
+#define IDS_TOOLBAR_INSERT              127
+#define IDR_MAINFRAME                   128
+#define IDR_MAINFRAME_256               129
+#define IDR_SiteMakerTYPE               130
+#define ID_WINDOW_MANAGER               131
+#define ID_SET_STYLE                    201
+#define ID_VIEW_APPLOOK_WIN_2000        205
+#define ID_VIEW_APPLOOK_OFF_XP          206
+#define ID_VIEW_APPLOOK_WIN_XP          207
+#define ID_VIEW_APPLOOK_OFF_2003        208
+#define ID_VIEW_APPLOOK_VS_2005         209
+#define ID_VIEW_APPLOOK_VS_2008         210
+#define ID_VIEW_APPLOOK_OFF_2007_BLUE   215
+#define ID_VIEW_APPLOOK_OFF_2007_BLACK  216
+#define ID_VIEW_APPLOOK_OFF_2007_SILVER 217
+#define ID_VIEW_APPLOOK_OFF_2007_AQUA   218
+#define ID_VIEW_APPLOOK_WINDOWS_7       219
+#define IDR_FORMAT                      310
+#define IDR_INSERT                      312
+#define ID_VIEW_FULLSCREEN              32770
+#define ID_CHAR_BOLD                    32776
+#define ID_CHAR_ITALIC                  32777
+#define ID_CHAR_UNDERLINE               32778
+#define ID_CHAR_STRIKETHROUGH           32779
+#define ID_CHAR_SUPERSCRIPT             32780
+#define ID_CHAR_SUBSCRIPT               32781
+#define ID_PARA_LEFT                    32782
+#define ID_PARA_CENTER                  32783
+#define ID_PARA_RIGHT                   32784
+#define ID_PARA_ULIST                   32785
+#define ID_PARA_OLIST                   32786
+#define ID_PARA_OUTDENT                 32787
+#define ID_PARA_INDENT                  32788
+#define ID_FORMAT_REMOVE                32818
+#define ID_PARA_NONE                    32820
+#define ID_PARA_INSERT                  32823
+#define ID_TEXT_HYPERLINK               32825
+#define ID_TEXT_UNLINK                  32826
+#define ID_LINK_HYPER                   32827
+#define ID_LINK_UN                      32828
+#define ID_BUTTON32832                  32832
+#define ID_INSERT_IMAGE                 32833
+#define ID_INSERT_HR                    32834
+#define ID_INSERT                       32835
+#define ID_INSERT_IMAGE32836            32836
+#define ID_INSERT_HORIZONTALLINE        32837
+#define ID_INSERT_PARAGRAPH             32838
+#define ID_INSERT_OBJECT                32840
+#define ID_TEXT_FORECOLOR               32843
+#define ID_TEXT_BACKCOLOR               32844
+#define ID_CHAR_FORECOLOR               32845
+#define ID_CHAR_BACKCOLOR               32846
+#define ID_INSERT_OBJECT32847           32847
+#define ID_INSERT_CONTROLS              32848
+#define ID_CONTROLS_BUTTON              32849
+#define ID_CONTROLS_CHECKBOX            32850
+#define ID_CONTROLS_RADIOBUTTON         32851
+#define ID_CONTROLS_TEXTBOX             32852
+#define ID_CONTROLS_TEXTAREA            32853
+#define ID_CONTROLS_DROPDOWNBOX         32854
+#define ID_CONTROLS_LISTBOX             32855
+#define ID_CONTROLS_IFRAME              32856
+#define ID_INSERT_BUTTON                32857
+#define ID_INSERT_CHECKBOX              32858
+#define ID_INSERT_RADIO                 32859
+#define ID_INSERT_CHECK                 32860
+#define ID_INSERT_TEXTBOX               32861
+#define ID_INSERT_TEXTAREA              32862
+#define ID_INSERT_DROPDOWN              32863
+#define ID_INSERT_LISTBOX               32864
+#define ID_INSERT_IFRAME                32865
+#define ID_VIEW_DESIGNMODE              32866
+#define ID_VIEW_VIEWINGMODE             32867
+#define ID_MODE_EDIT                    32868
+#define ID_MODE_VIEW                    32869
+
+// Next default values for new objects
+// 
+#ifdef APSTUDIO_INVOKED
+#ifndef APSTUDIO_READONLY_SYMBOLS
+#define _APS_NEXT_RESOURCE_VALUE        314
+#define _APS_NEXT_COMMAND_VALUE         32870
+#define _APS_NEXT_CONTROL_VALUE         1000
+#define _APS_NEXT_SYMED_VALUE           310
+#endif
+#endif
