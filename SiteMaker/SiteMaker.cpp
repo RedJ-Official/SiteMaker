@@ -178,6 +178,7 @@ protected:
 
 // Implementation
 protected:
+	afx_msg void OnNMClickSyslinkHomepage(NMHDR* pNMHDR, LRESULT* pResult);
 	DECLARE_MESSAGE_MAP()
 };
 
@@ -191,7 +192,16 @@ void CAboutDlg::DoDataExchange(CDataExchange* pDX)
 }
 
 BEGIN_MESSAGE_MAP(CAboutDlg, CDialogEx)
+	ON_NOTIFY(NM_CLICK, IDC_SYSLINK_HOMEPAGE, &CAboutDlg::OnNMClickSyslinkHomepage)
+	ON_NOTIFY(NM_RETURN, IDC_SYSLINK_HOMEPAGE, &CAboutDlg::OnNMClickSyslinkHomepage)
 END_MESSAGE_MAP()
+
+void CAboutDlg::OnNMClickSyslinkHomepage(NMHDR* pNMHDR, LRESULT* pResult)
+{
+	NMLINK* pNMLink = (NMLINK*)pNMHDR;
+	ShellExecute(NULL, _T("open"), pNMLink->item.szUrl, NULL, NULL, SW_SHOW);
+	*pResult = 0;
+}
 
 // App command to run the dialog
 void CSiteMakerApp::OnAppAbout()

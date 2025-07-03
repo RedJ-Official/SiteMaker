@@ -4,6 +4,10 @@
 //
 #define IDD_ABOUTBOX                    100
 #define IDP_OLE_INIT_FAILED             100
+#define IDS_CAPTION_OPTIONS             101
+#define IDS_CAPTION_EDITING             102
+#define IDD_PROPPAGE_LARGE              107
+#define IDD_PROPPAGE_EDITING            107
 #define IDS_TOOLBAR_STANDARD            124
 #define IDS_TOOLBAR_CUSTOMIZE           125
 #define ID_VIEW_CUSTOMIZE               126
@@ -27,6 +31,16 @@
 #define ID_VIEW_APPLOOK_WINDOWS_7       219
 #define IDR_FORMAT                      310
 #define IDR_INSERT                      312
+#define IDC_SYSLINK1                    1000
+#define IDC_SYSLINK_HOMEPAGE            1000
+#define IDC_CHECK_AUTOURL               1001
+#define IDC_CHECK_MULTISEL              1002
+#define IDC_CHECK_LIVERESIZE            1003
+#define IDC_CHECK_RESPECTVIS            1004
+#define IDC_CHECK_SILENT                1005
+#define IDC_CHECK_IE5PASTE              1006
+#define IDC_CHECK_ATOMICSEL             1007
+#define IDC_CHECK_DISABLEEDITFOCUSUI    1008
 #define ID_VIEW_FULLSCREEN              32770
 #define ID_CHAR_BOLD                    32776
 #define ID_CHAR_ITALIC                  32777
@@ -34,15 +48,15 @@
 #define ID_CHAR_STRIKETHROUGH           32779
 #define ID_CHAR_SUPERSCRIPT             32780
 #define ID_CHAR_SUBSCRIPT               32781
-#define ID_PARA_LEFT                    32782
-#define ID_PARA_CENTER                  32783
-#define ID_PARA_RIGHT                   32784
-#define ID_PARA_ULIST                   32785
-#define ID_PARA_OLIST                   32786
-#define ID_PARA_OUTDENT                 32787
-#define ID_PARA_INDENT                  32788
+#define ID_JUSTIFY_LEFT                 32782
+#define ID_JUSTIFY_CENTER               32783
+#define ID_JUSTIFY_RIGHT                32784
+#define ID_LIST_UNORDERED               32785
+#define ID_LIST_ORDERED                 32786
+#define ID_DENT_OUT                     32787
+#define ID_DENT_IN                      32788
 #define ID_FORMAT_REMOVE                32818
-#define ID_PARA_NONE                    32820
+#define ID_JUSTIFY_NONE                 32820
 #define ID_PARA_INSERT                  32823
 #define ID_TEXT_HYPERLINK               32825
 #define ID_TEXT_UNLINK                  32826
@@ -58,8 +72,8 @@
 #define ID_INSERT_OBJECT                32840
 #define ID_TEXT_FORECOLOR               32843
 #define ID_TEXT_BACKCOLOR               32844
-#define ID_CHAR_FORECOLOR               32845
-#define ID_CHAR_BACKCOLOR               32846
+#define ID_COLOR_FORE                   32845
+#define ID_COLOR_BACK                   32846
 #define ID_INSERT_OBJECT32847           32847
 #define ID_INSERT_CONTROLS              32848
 #define ID_CONTROLS_BUTTON              32849
@@ -83,14 +97,17 @@
 #define ID_VIEW_VIEWINGMODE             32867
 #define ID_MODE_EDIT                    32868
 #define ID_MODE_VIEW                    32869
+#define ID_CONTROLS_FIELDSET            32878
+#define ID_INSERT_FIELDSET              32879
+#define ID_INSERT_MARQUEE               32880
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
-#define _APS_NEXT_RESOURCE_VALUE        314
-#define _APS_NEXT_COMMAND_VALUE         32870
-#define _APS_NEXT_CONTROL_VALUE         1000
+#define _APS_NEXT_RESOURCE_VALUE        316
+#define _APS_NEXT_COMMAND_VALUE         32881
+#define _APS_NEXT_CONTROL_VALUE         1011
 #define _APS_NEXT_SYMED_VALUE           310
 #endif
 #endif

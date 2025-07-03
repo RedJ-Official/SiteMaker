@@ -45,6 +45,15 @@
     <ClInclude Include="SiteMakerDocHostUIHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="Options.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionPageEditing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="OptionSheet.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="SiteMaker.cpp">
@@ -66,6 +75,15 @@
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="SiteMakerDocHostUIHandler.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Options.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionPageEditing.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="OptionSheet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
