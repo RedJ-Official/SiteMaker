@@ -14,24 +14,25 @@ public:
 	virtual ~COptionPageEditing();
 
 public:
-	void SaveOptions(COptions& options) const;
-	void LoadOptions(const COptions& options);
+	void SaveOptions(Options& options) const;
+	void LoadOptions(const Options& options);
 
 // Dialog Data
 #ifdef AFX_DESIGN_TIME
-	enum { IDD = IDD_PROPPAGE_LARGE };
+	enum { IDD = IDD_PROPPAGE_EDITING };
 #endif
 
 protected:
-	BOOL bAtomicSelection;
-	BOOL bAutoURLDetectMode;
-	SHORT nCSSEditingLevel;
-	BOOL bDisableEditFocusUI;
-	BOOL bIE5PasteMode;
-	BOOL bLiveResize;
-	BOOL bMultiSelect;
-	BOOL bRespectVisInDesigner;
-	BOOL bSilent;
+	BOOL m_b2DPosition;
+	BOOL m_bAtomicSelection;
+	BOOL m_bAutoURLDetectMode;
+	INT m_nCSSEditingLevel;
+	BOOL m_bDisableEditFocusUI;
+	BOOL m_bIE5PasteMode;
+	BOOL m_bLiveResize;
+	BOOL m_bMultiSelect;
+	BOOL m_bRespectVisInDesign;
+	BOOL m_bSilent;
 
 protected:
 	afx_msg void OnCheckChange();

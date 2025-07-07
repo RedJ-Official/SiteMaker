@@ -160,6 +160,11 @@ int CSiteMakerApp::ExitInstance()
 
 // CSiteMakerApp message handlers
 
+void CSiteMakerApp::OnOptionsChanged()
+{
+
+}
+
 
 // CAboutDlg dialog used for App About
 
@@ -218,10 +223,30 @@ void CSiteMakerApp::PreLoadState()
 
 void CSiteMakerApp::LoadCustomState()
 {
+	m_options.b2DPosition = GetInt(_T("2DPosition"), m_options.b2DPosition);
+	m_options.bAtomicSelection = GetInt(_T("AtomicSelection"), m_options.bAtomicSelection);
+	m_options.bAutoURLDetectMode = GetInt(_T("AutoURLDetectMode"), m_options.bAutoURLDetectMode);
+	m_options.nCSSEditingLevel = GetInt(_T("CSSEditingLevel"), m_options.nCSSEditingLevel);
+	m_options.bDisableEditFocusUI = GetInt(_T("DisableEditFocusUI"), m_options.bDisableEditFocusUI);
+	m_options.bIE5PasteMode = GetInt(_T("IE5PasteMode"), m_options.bIE5PasteMode);
+	m_options.bLiveResize = GetInt(_T("LiveResize"), m_options.bLiveResize);
+	m_options.bMultiSelect = GetInt(_T("MultiSelect"), m_options.bMultiSelect);
+	m_options.bRespectVisInDesign = GetInt(_T("RespectVisInDesign"), m_options.bRespectVisInDesign);
+	m_options.bSilent = GetInt(_T("Silent"), m_options.bSilent);
 }
 
 void CSiteMakerApp::SaveCustomState()
 {
+	WriteInt(_T("2DPosition"), m_options.b2DPosition);
+	WriteInt(_T("AtomicSelection"), m_options.bAtomicSelection);
+	WriteInt(_T("AutoURLDetectMode"), m_options.bAutoURLDetectMode);
+	WriteInt(_T("CSSEditingLevel"), m_options.nCSSEditingLevel);
+	WriteInt(_T("DisableEditFocusUI"), m_options.bDisableEditFocusUI);
+	WriteInt(_T("IE5PasteMode"), m_options.bIE5PasteMode);
+	WriteInt(_T("LiveResize"), m_options.bLiveResize);
+	WriteInt(_T("MultiSelect"), m_options.bMultiSelect);
+	WriteInt(_T("RespectVisInDesign"), m_options.bRespectVisInDesign);
+	WriteInt(_T("Silent"), m_options.bSilent);
 }
 
 // CSiteMakerApp message handlers

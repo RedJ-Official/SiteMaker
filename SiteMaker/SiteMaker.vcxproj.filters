@@ -51,7 +51,7 @@
     <ClInclude Include="OptionPageEditing.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="OptionSheet.h">
+    <ClInclude Include="SiteMakerPropertySheet.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -83,7 +83,7 @@
     <ClCompile Include="OptionPageEditing.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="OptionSheet.cpp">
+    <ClCompile Include="SiteMakerPropertySheet.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

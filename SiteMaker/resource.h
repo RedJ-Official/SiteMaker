@@ -41,6 +41,8 @@
 #define IDC_CHECK_IE5PASTE              1006
 #define IDC_CHECK_ATOMICSEL             1007
 #define IDC_CHECK_DISABLEEDITFOCUSUI    1008
+#define IDC_CHECK_2DPOS                 1011
+#define IDC_COMBO_CSSEDITLEVEL          1012
 #define ID_VIEW_FULLSCREEN              32770
 #define ID_CHAR_BOLD                    32776
 #define ID_CHAR_ITALIC                  32777
@@ -53,15 +55,15 @@
 #define ID_JUSTIFY_RIGHT                32784
 #define ID_LIST_UNORDERED               32785
 #define ID_LIST_ORDERED                 32786
-#define ID_DENT_OUT                     32787
-#define ID_DENT_IN                      32788
+#define ID_BLOCK_OUTDENT                32787
+#define ID_BLOCK_INDENT                 32788
 #define ID_FORMAT_REMOVE                32818
 #define ID_JUSTIFY_NONE                 32820
 #define ID_PARA_INSERT                  32823
 #define ID_TEXT_HYPERLINK               32825
 #define ID_TEXT_UNLINK                  32826
-#define ID_LINK_HYPER                   32827
-#define ID_LINK_UN                      32828
+#define ID_FORMAT_HYPERLINK             32827
+#define ID_FORMAT_UNLINK                32828
 #define ID_BUTTON32832                  32832
 #define ID_INSERT_IMAGE                 32833
 #define ID_INSERT_HR                    32834
@@ -96,18 +98,31 @@
 #define ID_VIEW_DESIGNMODE              32866
 #define ID_VIEW_VIEWINGMODE             32867
 #define ID_MODE_EDIT                    32868
-#define ID_MODE_VIEW                    32869
+#define ID_MODE_BROWSE                  32869
 #define ID_CONTROLS_FIELDSET            32878
 #define ID_INSERT_FIELDSET              32879
 #define ID_INSERT_MARQUEE               32880
+#define ID_FILE_SENDMAILL               32881
+#define ID_PARAGRAPH_JUSTIFYFULL        32882
+#define ID_JUSTIFY_FULL                 32883
+#define ID_EDIT_PASTETEXT               32884
+#define ID_EDIT_PASTE_TEXT              32885
+#define ID_BLOCK_LEFTTORIGHT            32886
+#define ID_BLOCK_RIGHTTOLEFT            32887
+#define ID_BLOCK_LTR                    32888
+#define ID_BLOCK_RTL                    32889
+#define ID_VIEW_OPTIONS                 32890
+#define ID_TOOLS_OPTIONS                32891
+#define ID_POSITION_STATIC              32892
+#define ID_POSITION_ABSOLUE             32893
 
 // Next default values for new objects
 // 
 #ifdef APSTUDIO_INVOKED
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        316
-#define _APS_NEXT_COMMAND_VALUE         32881
-#define _APS_NEXT_CONTROL_VALUE         1011
+#define _APS_NEXT_COMMAND_VALUE         32894
+#define _APS_NEXT_CONTROL_VALUE         1014
 #define _APS_NEXT_SYMED_VALUE           310
 #endif
 #endif

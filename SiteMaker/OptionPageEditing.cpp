@@ -12,16 +12,17 @@
 IMPLEMENT_DYNAMIC(COptionPageEditing, CMFCPropertyPage)
 
 COptionPageEditing::COptionPageEditing()
-	: CMFCPropertyPage(IDD_PROPPAGE_LARGE, IDS_CAPTION_EDITING)
-	, bAtomicSelection(FALSE)
-	, bAutoURLDetectMode(FALSE)
-	, nCSSEditingLevel(0)
-	, bDisableEditFocusUI(FALSE)
-	, bIE5PasteMode(FALSE)
-	, bLiveResize(FALSE)
-	, bMultiSelect(FALSE)
-	, bRespectVisInDesigner(FALSE)
-	, bSilent(FALSE)
+	: CMFCPropertyPage(IDD_PROPPAGE_EDITING, IDS_CAPTION_EDITING)
+	, m_bAtomicSelection(FALSE)
+	, m_bAutoURLDetectMode(FALSE)
+	, m_nCSSEditingLevel(0)
+	, m_bDisableEditFocusUI(FALSE)
+	, m_bIE5PasteMode(FALSE)
+	, m_bLiveResize(FALSE)
+	, m_bMultiSelect(FALSE)
+	, m_bRespectVisInDesign(FALSE)
+	, m_bSilent(FALSE)
+	, m_b2DPosition(FALSE)
 {
 }
 
@@ -32,44 +33,49 @@ COptionPageEditing::~COptionPageEditing()
 void COptionPageEditing::DoDataExchange(CDataExchange* pDX)
 {
 	CMFCPropertyPage::DoDataExchange(pDX);
-	DDX_Check(pDX, IDC_CHECK_ATOMICSEL, bAtomicSelection);
-	DDX_Check(pDX, IDC_CHECK_AUTOURL, bAutoURLDetectMode);
-	DDX_Check(pDX, IDC_CHECK_DISABLEEDITFOCUSUI, bDisableEditFocusUI);
-	DDX_Check(pDX, IDC_CHECK_IE5PASTE, bIE5PasteMode);
-	DDX_Check(pDX, IDC_CHECK_LIVERESIZE, bLiveResize);
-	DDX_Check(pDX, IDC_CHECK_MULTISEL, bMultiSelect);
-	DDX_Check(pDX, IDC_CHECK_RESPECTVIS, bRespectVisInDesigner);
-	DDX_Check(pDX, IDC_CHECK_SILENT, bSilent);
+	DDX_Check(pDX, IDC_CHECK_2DPOS, m_b2DPosition);
+	DDX_Check(pDX, IDC_CHECK_ATOMICSEL, m_bAtomicSelection);
+	DDX_Check(pDX, IDC_CHECK_AUTOURL, m_bAutoURLDetectMode);
+	DDX_Check(pDX, IDC_CHECK_DISABLEEDITFOCUSUI, m_bDisableEditFocusUI);
+	DDX_Check(pDX, IDC_CHECK_IE5PASTE, m_bIE5PasteMode);
+	DDX_Check(pDX, IDC_CHECK_LIVERESIZE, m_bLiveResize);
+	DDX_Check(pDX, IDC_CHECK_MULTISEL, m_bMultiSelect);
+	DDX_Check(pDX, IDC_CHECK_RESPECTVIS, m_bRespectVisInDesign);
+	DDX_Check(pDX, IDC_CHECK_SILENT, m_bSilent);
+	DDX_CBIndex(pDX, IDC_COMBO_CSSEDITLEVEL, m_nCSSEditingLevel);
 }
 
-void COptionPageEditing::SaveOptions(COptions& options) const
+void COptionPageEditing::SaveOptions(Options& options) const
 {
-	options.bAtomicSelection = bAtomicSelection;
-	options.bAutoURLDetectMode = bAutoURLDetectMode;
-	options.nCSSEditingLevel = nCSSEditingLevel;
-	options.bDisableEditFocusUI = bDisableEditFocusUI;
-	options.bIE5PasteMode = bIE5PasteMode;
-	options.bLiveResize = bLiveResize;
-	options.bMultiSelect = bMultiSelect;
-	options.bRespectVisInDesigner = bRespectVisInDesigner;
-	options.bSilent = bSilent;
+	options.b2DPosition = m_b2DPosition;
+	options.bAtomicSelection = m_bAtomicSelection;
+	options.bAutoURLDetectMode = m_bAutoURLDetectMode;
+	options.nCSSEditingLevel = m_nCSSEditingLevel;
+	options.bDisableEditFocusUI = m_bDisableEditFocusUI;
+	options.bIE5PasteMode = m_bIE5PasteMode;
+	options.bLiveResize = m_bLiveResize;
+	options.bMultiSelect = m_bMultiSelect;
+	options.bRespectVisInDesign = m_bRespectVisInDesign;
+	options.bSilent = m_bSilent;
 }
 
-void COptionPageEditing::LoadOptions(const COptions& options)
+void COptionPageEditing::LoadOptions(const Options& options)
 {
-	bAtomicSelection = options.bAtomicSelection;
-	bAutoURLDetectMode = options.bAutoURLDetectMode;
-	nCSSEditingLevel = options.nCSSEditingLevel;
-	bDisableEditFocusUI = options.bDisableEditFocusUI;
-	bIE5PasteMode = options.bIE5PasteMode;
-	bLiveResize = options.bLiveResize;
-	bMultiSelect = options.bMultiSelect;
-	bRespectVisInDesigner = options.bRespectVisInDesigner;
-	bSilent = options.bSilent;
+	m_b2DPosition = options.b2DPosition;
+	m_bAtomicSelection = options.bAtomicSelection;
+	m_bAutoURLDetectMode = options.bAutoURLDetectMode;
+	m_nCSSEditingLevel = options.nCSSEditingLevel;
+	m_bDisableEditFocusUI = options.bDisableEditFocusUI;
+	m_bIE5PasteMode = options.bIE5PasteMode;
+	m_bLiveResize = options.bLiveResize;
+	m_bMultiSelect = options.bMultiSelect;
+	m_bRespectVisInDesign = options.bRespectVisInDesign;
+	m_bSilent = options.bSilent;
 }
 
 
 BEGIN_MESSAGE_MAP(COptionPageEditing, CMFCPropertyPage)
+	ON_BN_CLICKED(IDC_CHECK_2DPOS, &OnCheckChange)
 	ON_BN_CLICKED(IDC_CHECK_ATOMICSEL, &OnCheckChange)
 	ON_BN_CLICKED(IDC_CHECK_AUTOURL, &OnCheckChange)
 	ON_BN_CLICKED(IDC_CHECK_DISABLEEDITFOCUSUI, &OnCheckChange)
@@ -78,6 +84,7 @@ BEGIN_MESSAGE_MAP(COptionPageEditing, CMFCPropertyPage)
 	ON_BN_CLICKED(IDC_CHECK_MULTISEL, &OnCheckChange)
 	ON_BN_CLICKED(IDC_CHECK_RESPECTVIS, &OnCheckChange)
 	ON_BN_CLICKED(IDC_CHECK_SILENT, &OnCheckChange)
+	ON_CBN_SELCHANGE(IDC_COMBO_CSSEDITLEVEL, &OnCheckChange)
 END_MESSAGE_MAP()
 
 // COptionPageEditing message handlers

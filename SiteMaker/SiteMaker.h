@@ -9,6 +9,7 @@
 
 #include "resource.h"       // main symbols
 
+#include "Options.h"
 
 // CSiteMakerApp:
 // See SiteMaker.cpp for the implementation of this class
@@ -19,6 +20,8 @@ class CSiteMakerApp : public CWinAppEx
 public:
 	CSiteMakerApp() noexcept;
 
+public:
+	virtual void OnOptionsChanged();
 
 // Overrides
 public:
@@ -28,6 +31,7 @@ public:
 // Implementation
 	UINT  m_nAppLook;
 	BOOL  m_bHiColorIcons;
+	Options m_options;
 
 	virtual void PreLoadState();
 	virtual void LoadCustomState();

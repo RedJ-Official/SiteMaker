@@ -188,7 +188,7 @@
     <ClInclude Include="MainFrm.h" />
     <ClInclude Include="OptionPageEditing.h" />
     <ClInclude Include="Options.h" />
-    <ClInclude Include="OptionSheet.h" />
+    <ClInclude Include="SiteMakerPropertySheet.h" />
     <ClInclude Include="pch.h" />
     <ClInclude Include="Resource.h" />
     <ClInclude Include="SiteMaker.h" />
@@ -202,7 +202,7 @@
     <ClCompile Include="MainFrm.cpp" />
     <ClCompile Include="OptionPageEditing.cpp" />
     <ClCompile Include="Options.cpp" />
-    <ClCompile Include="OptionSheet.cpp" />
+    <ClCompile Include="SiteMakerPropertySheet.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>

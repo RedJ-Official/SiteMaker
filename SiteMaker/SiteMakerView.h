@@ -20,7 +20,9 @@ public:
 public:
 	virtual void OnBeforeNavigate2(LPCTSTR lpszURL, DWORD nFlags, LPCTSTR lpszTargetFrameName, CByteArray& caPostedData, LPCTSTR lpszHeaders, BOOL* pbCancel);
 	virtual void OnNavigateComplete2(LPCTSTR strURL);
-	virtual void OnColorCommand(UINT nIDM);
+	virtual void OnColor(UINT nIDM);
+	virtual void OnPositionStatic(UINT);
+	virtual void OnPositionAbsolute(UINT);
 
 // Overrides
 public:

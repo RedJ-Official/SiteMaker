@@ -13,8 +13,8 @@ public:
 
 // Operations
 public:
-	void SaveOptions(COptions& options) const;
-	void LoadOptions(const COptions& options);
+	void SaveOptions(Options& options) const;
+	void LoadOptions(const Options& options);
 
 // Attributes
 public:

@@ -1,5 +1,6 @@
 #include "pch.h"
-#include "OptionSheet.h"
+#include "SiteMakerPropertySheet.h"
+#include "SiteMaker.h"
 #include "resource.h"
 
 COptionSheet::COptionSheet(CWnd* pParentWnd, UINT iSelectPage)
@@ -9,12 +10,12 @@ COptionSheet::COptionSheet(CWnd* pParentWnd, UINT iSelectPage)
 	AddPage(&m_pageEditing);
 }
 
-void COptionSheet::SaveOptions(COptions& options) const
+void COptionSheet::SaveOptions(Options& options) const
 {
 	m_pageEditing.SaveOptions(options);
 }
 
-void COptionSheet::LoadOptions(const COptions& options)
+void COptionSheet::LoadOptions(const Options& options)
 {
 	m_pageEditing.LoadOptions(options);
 }
@@ -26,5 +27,8 @@ END_MESSAGE_MAP()
 
 void COptionSheet::OnApply()
 {
-	
+	m_pageEditing.UpdateData();
+	SaveOptions(theApp.m_options);
+	theApp.OnOptionsChanged();
+	m_pageEditing.SetModified(FALSE);
 }

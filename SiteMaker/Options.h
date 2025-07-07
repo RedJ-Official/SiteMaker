@@ -3,29 +3,30 @@
 #include "pch.h"
 #include "framework.h"
 
-class COptions
+class Options
 {
 public:
-	COptions();
+	Options();
 
 public:
-	BOOL bAtomicSelection;
-	BOOL bAutoURLDetectMode;
-	SHORT nCSSEditingLevel;
-	BOOL bDisableEditFocusUI;
-	BOOL bIE5PasteMode;
-	BOOL bLiveResize;
-	BOOL bMultiSelect;
-	BOOL bRespectVisInDesigner;
-	BOOL bShowAlignedSiteTags;
-	BOOL bShowAllTags;
-	BOOL bShowAreaTags;
-	BOOL bShowBRTags;
-	BOOL bShowCommentTags;
-	BOOL bShowMiscTags;
-	BOOL bShowScriptTags;
-	BOOL bShowStyleTags;
-	BOOL bShowUnknownTags;
-	BOOL bSilent;
+	BOOL b2DPosition = FALSE;
+	BOOL bAtomicSelection = FALSE;
+	BOOL bAutoURLDetectMode = TRUE;
+	SHORT nCSSEditingLevel = 1;
+	BOOL bDisableEditFocusUI = FALSE;
+	BOOL bIE5PasteMode = FALSE;
+	BOOL bLiveResize = TRUE;
+	BOOL bMultiSelect = FALSE;
+	BOOL bRespectVisInDesign = FALSE;
+	BOOL bShowAlignedSiteTags = FALSE;
+	BOOL bShowAllTags = FALSE;
+	BOOL bShowAreaTags = FALSE;
+	BOOL bShowBRTags = FALSE;
+	BOOL bShowCommentTags = FALSE;
+	BOOL bShowMiscTags = FALSE;
+	BOOL bShowScriptTags = FALSE;
+	BOOL bShowStyleTags = FALSE;
+	BOOL bShowUnknownTags = FALSE;
+	BOOL bSilent = FALSE;
 };
 
